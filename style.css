@@ -1,0 +1,71 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Orbitron", sans-serif; */
+  font-family: "Nova Square", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+::selection {
+  background-color: transparent;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+}
+.digital_clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  width: 90%;
+  max-width: 600px;
+  background-color: rgb(209, 209, 209);
+  border-radius: 5px;
+  outline: 2px solid white;
+  outline-offset: 5px;
+  padding: 20px 0;
+  margin: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.digital_clock .clock_time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+.clock_time h1 {
+  text-align: center;
+  font-size: 80px;
+  font-weight: bolder;
+}
+.clock_time span {
+  flex: 1;
+  font-size: 50px;
+  margin-left: 10px;
+}
+.clock_day {
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.day {
+  font-size: 20px;
+}
+.day.active {
+  background-color: red;
+  color: white;
+}
