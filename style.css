@@ -1,11 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
-  /* font-family: "Poppins", sans-serif; */
-  /* font-family: "Orbitron", sans-serif; */
   font-family: "Nova Square", sans-serif;
   box-sizing: border-box;
   overflow: hidden;
@@ -17,7 +13,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  flex-wrap: wrap;
+  width: 100%;
   height: 100vh;
   background-color: #222;
 }
@@ -26,7 +23,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: fit-content;
+  height: auto;
   width: 90%;
   max-width: 600px;
   background-color: rgb(209, 209, 209);
@@ -38,34 +35,92 @@ body {
   text-align: center;
   overflow: hidden;
 }
-.digital_clock .clock_time {
+.clock_date {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  flex-wrap: nowrap;
   flex-direction: row;
-  overflow: hidden;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  right: 5%;
+  padding: 5px;
+  width: 100%;
 }
-.clock_time h1 {
+.date {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: fit-content;
+}
+.date .dateText {
+  font-size: 15px;
+  color: #222;
+  padding-inline: 2px;
+  margin-inline: 2px;
   text-align: center;
-  font-size: 80px;
+}
+.date #date {
+  font-size: 24px;
   font-weight: bolder;
 }
-.clock_time span {
-  flex: 1;
-  font-size: 50px;
-  margin-left: 10px;
-}
-.clock_day {
-  background-color: gray;
+.clock_time {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+}
+.clock_time h1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  width: 90%;
+}
+.clock_time h1 span {
+  position: relative;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bolder;
+}
+h1 .time {
+  width: 100px;
+}
+.clock_time h1 .text {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.clock_time h1 #ampm {
+  position: relative;
+  font-size: 50px;
+  text-align: left;
+  padding: 10px;
+  height: auto;
+  width: 20%;
+}
+.clock_day {
+  position: relative;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
   width: 100%;
 }
 .day {
-  font-size: 20px;
+  padding-inline: 20px;
+  font-size: 16px;
+  color: #222;
 }
 .day.active {
-  background-color: red;
-  color: white;
+  border-inline: 2px solid black;
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
 }
